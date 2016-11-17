@@ -7,7 +7,6 @@
 from __future__ import unicode_literals
 import re
 import operator
-import math
 
 debug = False
 
@@ -164,7 +163,7 @@ if __name__ == '__main__':
     totalKeywords = len(sortedKeywords)
     if debug:
         print(totalKeywords)
-    print(sortedKeywords[0:math.floor(totalKeywords / 3)])
+    print(sortedKeywords[0:totalKeywords // 3])
 
     rake = Rake("SmartStoplist.txt")
     keywords = rake.run(text)
